@@ -1,0 +1,71 @@
+<div class="back-drop" (click)="shengesearchStatus()" [ngStyle]="{'display' : searchStatus?  'block' : 'none' }" ></div>
+<div class="container">
+    <i class="material-icons nav-drop-button" (click)="showNav()">menu</i>
+    <div class="logo">
+        <div>
+            <span style="color: #b71826">T</span><span>ILE.EXPERT</span>
+            <i class="material-icons redArrow">near_me</i>
+        </div>
+    </div>
+    <div class="nav"  [ngClass]="{hide: showNavStatus === true}" (click)="showNav()">
+        <ul>
+            <li>Ссылки <i class="material-icons">arrow_drop_down</i></li>
+            <li>Контакты</li>
+            <li>Теги <i class="material-icons">arrow_drop_down</i></li>
+            <li>Просьбы <i class="material-icons">arrow_drop_down</i></li>
+            <li>Избранное <i class="material-icons">arrow_drop_down</i></li>
+            <li>Посещения <i class="material-icons">arrow_drop_down</i></li>
+        </ul>
+    </div>
+    <div  class="search">
+        <i (click)="shengesearchStatus()" class="material-icons">search</i>
+        <div class="search-input-wrapper" [ngClass]="{show: searchStatus === true}">
+            <div class="search-input">
+                <i class="material-icons">search</i>
+                <input type="text" (click)="serchDetailsStatus = true">
+                <i class="material-icons">clear</i>
+                <button>НАЙТИ</button>
+            </div>
+            <div class="serch-details" [ngClass]="{serchDetailsShow: serchDetailsStatus === true}">
+                <div>
+                    <label class="checkbox">
+                        <input type="checkbox" />
+                        <span>мои</span>
+                    </label>
+                    <input class="setAthorInput" type="text" placeholder="Автор">
+                </div>
+                <div>
+                    <span style="cursor: default; margin-top: 3px;">Сортировать по: </span>
+                    <select class="details-sort" id="details-sort">
+                        <option value="date">дате</option>
+                        <option value="relevation">релевантности</option>
+                    </select>
+                </div>
+                <div class="serch-details-cheks">
+                    <label class="checkbox">
+                        <input type="checkbox" />
+                        <span>я учасник</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" checked />
+                        <span> в заголовке</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" />
+                        <span> строгий поиск</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <i class="material-icons">add_circle</i>
+    </div>
+    <div class="nav side">
+        <i class="material-icons">mail_outline</i>
+        <div class="notifications-icon">
+            <i class="material-icons">notifications_none</i>
+            <span class="notifications-count" style="width: 14px; height:14px">18</span>
+        </div>
+        <img src="https://scontent.flwo2-1.fna.fbcdn.net/v/t1.0-9/104489990_574584926808274_856617304151109194_o.jpg?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=i1oEihs9gc4AX8iU8Wo&_nc_ht=scontent.flwo2-1.fna&oh=fb5e1f59c82160bcffb8531ddd79d9c7&oe=6035839D" alt="">
+    </div>
+</div>
